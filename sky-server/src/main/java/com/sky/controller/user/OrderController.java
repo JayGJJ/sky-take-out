@@ -96,6 +96,16 @@ public class OrderController {
         return Result.success();
     }
 
+    /*
+    * 客户催单
+    * */
+    @GetMapping("/reminder/{id}")
+    @ApiOperation("客户催单")
+    public Result reminder(@PathVariable Long id){
+        orderService.reminder(id);
+        return Result.success();
+    }
+
 //    @PutMapping("/payment")
 //    @ApiOperation("订单支付")
 //    public Result<OrderPaymentVO> payment(@RequestBody OrdersPaymentDTO ordersPaymentDTO) throws Exception {
