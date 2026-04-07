@@ -61,4 +61,5 @@ public interface OrderMapper {
     * 根据动态条件统计营业额数据
     * */
     Double sumByMap(Map map);
+
 }
